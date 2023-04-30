@@ -681,15 +681,6 @@ const toggleKeyClass = (key) => {
     100
   );
 };
-//////////////////////////Find keyboard element and add active class//////////////////////////
-// const concatenationOfValues = (displayValue) => {
-//     document.querySelectorAll(".use-keyboard-input").forEach(element => {
-//             let displayResult = element.value;
-//             displayValue += displayResult;
-//             setLocalStorage();
-//         });
-// }
-//////////////
 document.addEventListener("keydown", function (e) {
   let dataValue = checkPressing(e.key, e);
   toggleKeyClass(dataValue);
