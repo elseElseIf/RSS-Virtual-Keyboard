@@ -183,7 +183,8 @@ const Keyboard = {
 
     keyLayoutEng.forEach((key) => {
       const keyElement = document.createElement("button");
-      const insertLineBreak = ["backspace", "]", "enter", "done"].indexOf(key) !== -1;
+      const insertLineBreak =
+        ["backspace", "]", "enter", "done"].indexOf(key) !== -1;
 
       // Add attributes/classes
       keyElement.setAttribute("type", "button");
@@ -196,7 +197,10 @@ const Keyboard = {
           keyElement.dataset.value = key;
 
           keyElement.addEventListener("click", () => {
-            this.properties.value = this.properties.value.substring(0, this.properties.value.length - 1);
+            this.properties.value = this.properties.value.substring(
+              0,
+              this.properties.value.length - 1
+            );
             this._triggerEvent("oninput");
           });
 
@@ -212,7 +216,10 @@ const Keyboard = {
 
           keyElement.addEventListener("click", () => {
             this._toggleCapsLock();
-            keyElement.classList.toggle("keyboard__key--active", this.properties.capsLock);
+            keyElement.classList.toggle(
+              "keyboard__key--active",
+              this.properties.capsLock
+            );
           });
 
           break;
@@ -669,7 +676,10 @@ const checkPressing = (key, event) => {
 const toggleKeyClass = (key) => {
   let elementOfKeyboard = document.querySelector(`button[data-value="${key}"]`);
   elementOfKeyboard.classList.toggle("keyboard__key--active--manual");
-  setTimeout(() => elementOfKeyboard.classList.toggle("keyboard__key--active--manual"), 100);
+  setTimeout(
+    () => elementOfKeyboard.classList.toggle("keyboard__key--active--manual"),
+    100
+  );
 };
 //////////////////////////Find keyboard element and add active class//////////////////////////
 // const concatenationOfValues = (displayValue) => {
