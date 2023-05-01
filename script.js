@@ -325,13 +325,6 @@ const Keyboard = {
 
   _toggleCapsLock() {
     this.properties.capsLock = !this.properties.capsLock;
-
-    //////////////change textContent on keyboard///////////////////
-    // for (const key of this.elements.keys) {
-    //     if (key.childElementCount === 0) {
-    //         key.textContent = this.properties.capsLock ? key.textContent.toUpperCase() : key.textContent.toLowerCase();
-    //     }
-    // }
   },
   _toggleLanguage(keys) {
     const totalNumberOfKeys = document.getElementsByClassName("keyboard__key");
